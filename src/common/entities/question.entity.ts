@@ -3,6 +3,7 @@ import {
   DataType,
   ForeignKey,
   HasMany,
+  Index,
   Length,
   Table,
 } from 'sequelize-typescript';
@@ -23,6 +24,7 @@ export default class Question extends BaseEntity {
   })
   declare type: QuestionType;
 
+  @Index
   @ForeignKey(() => Quiz)
   @Column({ type: DataType.UUID, allowNull: false })
   declare quiz: Quiz;

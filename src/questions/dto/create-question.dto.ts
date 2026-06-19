@@ -17,8 +17,8 @@ export class CreateQuestionDto {
   @IsEnum(QuestionType)
   type!: QuestionType;
 
-  @ArrayMinSize(2, {
-    message: 'Each question must have at least 2 answer options',
+  @ArrayMinSize(1, {
+    message: 'Each question must have at least 1 answer options',
   })
   @ValidateNested({ each: true })
   @Type(() => CreateAnswerDto)

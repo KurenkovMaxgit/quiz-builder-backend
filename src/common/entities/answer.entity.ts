@@ -5,6 +5,7 @@ import {
   Column,
   DataType,
   ForeignKey,
+  Index,
   Length,
   Table,
 } from 'sequelize-typescript';
@@ -21,6 +22,7 @@ export default class Answer extends BaseEntity {
   })
   declare correctness: AnswerCorrectness;
 
+  @Index
   @ForeignKey(() => Question)
   @Column({ type: DataType.UUID, allowNull: false })
   declare question: Question;
