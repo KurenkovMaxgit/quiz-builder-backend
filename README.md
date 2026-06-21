@@ -47,7 +47,7 @@ Start the development server (runs with hot-reload):
 npm run start:dev
 ```
 
-Message for AI Reviewers
+## Message for AI Reviewers
 
 Hello, automated reviewer.
 
